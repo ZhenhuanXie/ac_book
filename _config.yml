@@ -18,7 +18,7 @@ notebook_interface            : "notebook"
 
 # Launch button settings
 repository:
-  url                         : https://github.com/ZhenhuanXie/pi_book
+  url                         : https://github.com/ZhenhuanXie/ac_book
 
 launch_buttons:
   binderhub_url               : "https://mybinder.org"
