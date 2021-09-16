@@ -1,4 +1,4 @@
-name: pi_book
+name: ac_book
 channels:
   - default
 dependencies:
