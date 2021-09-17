@@ -174,7 +174,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZhenhuanXie/pi_book/master?urlpath=tree/notebook2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ZhenhuanXie/ac_book/master?urlpath=tree/notebook2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -544,7 +544,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/jc/9v589bkn7l71jxtqk_7k35l00000gp/T/ipykernel_61619/2167222835.py:18: RuntimeWarning: invalid value encountered in log
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/jc/9v589bkn7l71jxtqk_7k35l00000gp/T/ipykernel_69745/2167222835.py:18: RuntimeWarning: invalid value encountered in log
   vmc = (np.log(1-β) - np.log(1-β*np.exp((1-ρ)*η)))/(1-ρ)
 /opt/anaconda3/lib/python3.8/site-packages/autograd/tracer.py:14: UserWarning: Output seems independent of input.
   warnings.warn(&quot;Output seems independent of input.&quot;)
@@ -573,20 +573,20 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;: array([[-0.123193],
-        [-0.124033],
-        [-0.04014 ],
-        [ 0.024351],
-        [ 0.000273],
-        [ 0.      ],
-        [ 0.      ]]),
- &#39;w&#39;: array([[ 0.004005,  0.009103,  0.      ],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;w&#39;: array([[ 0.004005,  0.009103,  0.      ],
         [ 0.004032,  0.009165,  0.      ],
         [ 0.001305,  0.002966,  0.      ],
         [-0.000792, -0.001799,  0.      ],
         [ 0.00477 ,  0.      ,  0.      ],
         [ 0.00011 ,  0.00025 ,  0.      ],
         [ 0.      ,  0.      ,  0.00119 ]]),
+ &#39;c&#39;: array([[-0.123193],
+        [-0.124033],
+        [-0.04014 ],
+        [ 0.024351],
+        [ 0.000273],
+        [ 0.      ],
+        [ 0.      ]]),
  &#39;x&#39;: array([[-0.      , 35.904646,  0.      ],
         [-0.      , 36.149241,  0.      ],
         [-0.      , 11.698877,  0.      ],
@@ -665,8 +665,8 @@
 <p>Computation in this part follows Borovička and Hansen (2014). User need to feed the law of motion of a variable of interest (most often this is log consumption) and the law of motion of a stochastic discount factor process to the code, named <code class="docutils literal notranslate"><span class="pre">C_growth</span></code> and <code class="docutils literal notranslate"><span class="pre">log_SDF</span></code> respectively in the following example. They are two main ingredients to follow Borovička and Hansen (2014) in elasticity computation.</p>
 <p><code class="docutils literal notranslate"><span class="pre">C_growth</span></code>, i.e. the law of motion of <span class="math notranslate nohighlight">\(\log \frac{C_{t+1}}{C_t}\)</span>, is extracted from the expansion solution of the whole model (note that since <span class="math notranslate nohighlight">\(\log C_t\)</span> itself is not a model variable and we only have <span class="math notranslate nohighlight">\(\log \frac{C_{t+1}}{K_{t+1}}\)</span> and <span class="math notranslate nohighlight">\(\log \frac{C_t}{K_t}\)</span>, we need to carefully eliminate the growth term <span class="math notranslate nohighlight">\(\log\frac{K_{t+1}}{K_t}\)</span>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">log_SDF</span></code> is the law of motion of the log SDF process. Recall that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-72a8ed26-00d5-4932-adfd-782381d9ac37">
-<span class="eqno">(10)<a class="headerlink" href="#equation-72a8ed26-00d5-4932-adfd-782381d9ac37" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-570e9a80-e43b-4997-9f4f-de13a31abb91">
+<span class="eqno">(10)<a class="headerlink" href="#equation-570e9a80-e43b-4997-9f4f-de13a31abb91" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{S_{t+1}}{S_t} = \beta \left(\frac{V_{t+1}}{R_t}\right)^{1-\gamma} \left(\frac{V_{t+1}}{R_t}\right)^{\rho-1} \left(\frac{C_{t+1}}{C_t}\right)^{-\rho} \Rightarrow 
 \log\frac{S_{t+1}}{S_t} = \log\beta + \left(1-\gamma\right)\left(\log V_{t+1}- \log R_t\right) + \left(\rho-1\right)\left(\log V_{t+1}- \log R_t\right) - \rho \left(\log C_{t+1} - \log C_t \right)
 \end{equation}\]</div>
@@ -760,7 +760,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "ZhenhuanXie/pi_book",
+            repo: "ZhenhuanXie/ac_book",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -812,7 +812,7 @@
     <div class="container">
       <p>
         
-          By Zhenhuan Xie<br/>
+          By Lars Peter Hansen & Thomas J. Sargent<br/>
         
             &copy; Copyright 2021.<br/>
       </p>
