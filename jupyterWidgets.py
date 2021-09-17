@@ -278,7 +278,7 @@ U_d2 = widgets.BoundedFloatText( ## cov11
 shock = widgets.Dropdown(
     options = {'1', '2', '3'},
     value = '1',
-    description='Shock Number:',
+    description='Shock index:',
     disabled=False,
     style = {'description_width': '180px'},
     layout = Layout(width='70%')
@@ -366,7 +366,7 @@ chi = widgets.BoundedFloatText( ## cov11
     step= 0.05,
     min = 0,
     max = .9999,
-    description=r'$\chi \in [0,1)$',
+    description=r'$\chi \in (0,1)$',
     disabled=False,
     style = style_med,
     layout = layout_med
@@ -377,7 +377,7 @@ alpha = widgets.BoundedFloatText( ## cov11
     step= 0.0001,
     min = 0,
     max = .9999,
-    description=r'$\alpha \in [0,1)$',
+    description=r'$\alpha \in (0,1)$',
     disabled=False,
     style = style_med,
     layout = layout_med
@@ -388,7 +388,7 @@ epsilon = widgets.BoundedFloatText( ## cov11
     step= 0.05,
     min = 0,
     max = 1000,
-    description=r'$\epsilon \in (0, 5]$',
+    description=r'$\epsilon \in (0, 20)$',
     disabled=False,
     style = style_med,
     layout = layout_med
@@ -398,16 +398,19 @@ def displayHabit(habit):
     ## This function displays the box to input households productivity
     ## if hosueholds are allowed to hold capital.
     if habit == 1:
-        chi.layout.display = 'none'
-        alpha.layout.display = 'none'
-        epsilon.layout.display = 'none'
+        chi.layout.visibility = 'hidden'
+        alpha.layout.visibility = 'hidden'
+        epsilon.layout.visibility = 'hidden'
         chi.value = 0.9
         alpha.value = 0.9
         epsilon.value = 3
+        display(chi)
+        display(alpha)
+        display(epsilon)
     else:
-        chi.layout.display = None
-        alpha.layout.display = None
-        epsilon.layout.display = None
+        chi.layout.visibility = 'visible'
+        alpha.layout.visibility = 'visible'
+        epsilon.layout.visibility = 'visible'
         chi.value = 0.9
         alpha.value = 0.9
         epsilon.value = 3
@@ -461,8 +464,8 @@ conf_int = widgets.BoundedFloatText(
     max = .9999,
     description='Risk Price Confidence Interval',
     disabled=False,
-    style = style_med,
-    layout = layout_med
+    style = {'description_width': '180px'},
+    layout = Layout(width='70%')
 )
 
 checkParams = widgets.Button(
@@ -531,7 +534,7 @@ slider_box = VBox([widgets.Label(value="Slider setting"), sliderOut,slider_min,s
 tech_shock_box = VBox([sigk_box, U_k_box], layout = Layout(width='100%'))
 pref_shock_box = VBox([sigd_box, U_d_box], layout = Layout(width='100%'))
 
-Selector_box = VBox([widgets.Label(value="Graph parameters"), shock, plotName, conf_int], \
+Selector_box = VBox([widgets.Label(value="Graph parameters"), shock, conf_int, plotName], \
                     layout = Layout(width='90%'))
 
 
