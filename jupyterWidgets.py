@@ -354,8 +354,8 @@ slider_step= widgets.BoundedFloatText(
 
 habit = widgets.Dropdown(
     options = [('No Habit',1), ('Habit Internalized',3)],
-    value = 1,
-    description='Habit:',
+    value = 3,
+    description='Habit type:',
     disabled=False,
     style = {'description_width': '180px'},
     layout = Layout(width='70%')
