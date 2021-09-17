@@ -544,7 +544,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/jc/9v589bkn7l71jxtqk_7k35l00000gp/T/ipykernel_76775/2167222835.py:18: RuntimeWarning: invalid value encountered in log
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/jc/9v589bkn7l71jxtqk_7k35l00000gp/T/ipykernel_77733/2167222835.py:18: RuntimeWarning: invalid value encountered in log
   vmc = (np.log(1-β) - np.log(1-β*np.exp((1-ρ)*η)))/(1-ρ)
 /opt/anaconda3/lib/python3.8/site-packages/autograd/tracer.py:14: UserWarning: Output seems independent of input.
   warnings.warn(&quot;Output seems independent of input.&quot;)
@@ -665,8 +665,8 @@
 <p>Computation in this part follows Borovička and Hansen (2014). User need to feed the law of motion of a variable of interest (most often this is log consumption) and the law of motion of a stochastic discount factor process to the code, named <code class="docutils literal notranslate"><span class="pre">C_growth</span></code> and <code class="docutils literal notranslate"><span class="pre">log_SDF</span></code> respectively in the following example. They are two main ingredients to follow Borovička and Hansen (2014) in elasticity computation.</p>
 <p><code class="docutils literal notranslate"><span class="pre">C_growth</span></code>, i.e. the law of motion of <span class="math notranslate nohighlight">\(\log \frac{C_{t+1}}{C_t}\)</span>, is extracted from the expansion solution of the whole model (note that since <span class="math notranslate nohighlight">\(\log C_t\)</span> itself is not a model variable and we only have <span class="math notranslate nohighlight">\(\log \frac{C_{t+1}}{K_{t+1}}\)</span> and <span class="math notranslate nohighlight">\(\log \frac{C_t}{K_t}\)</span>, we need to carefully eliminate the growth term <span class="math notranslate nohighlight">\(\log\frac{K_{t+1}}{K_t}\)</span>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">log_SDF</span></code> is the law of motion of the log SDF process. Recall that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff5be24b-b9c8-4ed3-a669-477893ba17bb">
-<span class="eqno">(10)<a class="headerlink" href="#equation-ff5be24b-b9c8-4ed3-a669-477893ba17bb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7efa8bc9-5acc-407d-bc6b-eb1b74c1348e">
+<span class="eqno">(10)<a class="headerlink" href="#equation-7efa8bc9-5acc-407d-bc6b-eb1b74c1348e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{S_{t+1}}{S_t} = \beta \left(\frac{V_{t+1}}{R_t}\right)^{1-\gamma} \left(\frac{V_{t+1}}{R_t}\right)^{\rho-1} \left(\frac{C_{t+1}}{C_t}\right)^{-\rho} \Rightarrow 
 \log\frac{S_{t+1}}{S_t} = \log\beta + \left(1-\gamma\right)\left(\log V_{t+1}- \log R_t\right) + \left(\rho-1\right)\left(\log V_{t+1}- \log R_t\right) - \rho \left(\log C_{t+1} - \log C_t \right)
 \end{equation}\]</div>

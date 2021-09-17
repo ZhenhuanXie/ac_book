@@ -394,26 +394,26 @@ epsilon = widgets.BoundedFloatText( ## cov11
     layout = layout_med
 )
 
-def displayHabit(habit):
-    ## This function displays the box to input households productivity
-    ## if hosueholds are allowed to hold capital.
-    #if habit == 1:
-    #    chi.layout.display = 'none'
-    #    alpha.layout.display = 'none'
-    #    epsilon.layout.display = 'none'
-    #    chi.value = 0.9
-    #    alpha.value = 0.9
-    #    epsilon.value = 10
-    #else:
-    chi.layout.display = None
-    alpha.layout.display = None
-    epsilon.layout.display = None
-    chi.value = 0.9
-    alpha.value = 0.9
-    epsilon.value = 10
-    display(chi)
-    display(alpha)
-    display(epsilon)
+#def displayHabit(habit):
+#    ## This function displays the box to input households productivity
+#    ## if hosueholds are allowed to hold capital.
+#    #if habit == 1:
+#    #    chi.layout.display = 'none'
+#    #    alpha.layout.display = 'none'
+#    #    epsilon.layout.display = 'none'
+#    #    chi.value = 0.9
+#    #    alpha.value = 0.9
+#    #    epsilon.value = 10
+#    #else:
+#    chi.layout.display = None
+#    alpha.layout.display = None
+#    epsilon.layout.display = None
+#    chi.value = 0.9
+#    alpha.value = 0.9
+#    epsilon.value = 10
+#    display(chi)
+#    display(alpha)
+#    display(epsilon)
 
 #def displayHabit(habit):
 #    ## This function displays the box to input households productivity
@@ -455,7 +455,7 @@ def displayHabit(habit):
 #        slider_var.value = 'γ'
 #        display(slider_var)
 
-habitOut = widgets.interactive_output(displayHabit, {'habit': habit})
+#habitOut = widgets.interactive_output(displayHabit, {'habit': habit})
 #sliderOut = widgets.interactive_output(displaySlider, {'habit': habit})
 
 timeHorizon = widgets.BoundedIntText( ## death rate
@@ -547,7 +547,9 @@ sigd_box = VBox([widgets.Label(value=r"$\sigma_d$"), sigd_box1], layout = Layout
 U_d_box1 = HBox([U_d1, U_d2], layout = Layout(width='100%'))
 U_d_box = VBox([widgets.Label(value=r"$U_d$"), U_d_box1], layout = Layout(width='90%'))
 
-habit_box = VBox([widgets.Label(value="Habit"), habit, gamma, habitOut], \
+#habit_box = VBox([widgets.Label(value="Habit"), habit, gamma, habitOut], \
+#layout = Layout(width='90%'))
+habit_box = VBox([widgets.Label(value="Habit"), habit, gamma, chi, alpha, epsilon], \
 layout = Layout(width='90%'))
 order_box = VBox([widgets.Label(value="Solution details"), order, timeHorizon], layout = Layout(width='90%'))
 slider_box = VBox([widgets.Label(value="Slider setting"), slider_var,slider_min,slider_max,slider_step], layout = Layout(width='90%'))
